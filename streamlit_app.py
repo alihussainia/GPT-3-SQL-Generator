@@ -58,7 +58,7 @@ if submit_button and inp=="":
   st.write("Please enter your problem above")
 
 elif submit_button and inp!="":
-  output = gpt.submit_request(inp.value)
+  output = gpt.submit_request(inp)
   result = output['choices'][0].text
   query = result.split('output:')[1]
   st.markdown(query) 
